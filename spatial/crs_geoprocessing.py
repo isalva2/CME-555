@@ -19,7 +19,7 @@ crs3435_chicago_gdf.to_file(
         data_path, "interim/shp/chicago/chicago_epsg3435.shp")
     )
 
-# read and write cook county shape file https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-City/ewy2-6yfk
+# read and write cook county shape file https://hub-cookcountyil.opendata.arcgis.com/datasets/ea127f9e96b74677892722069c984198_1/explore
 file = "external/shp/Cook_County_Border/Cook_County_Border.shp"
 
 # read file
