@@ -51,6 +51,6 @@ counties = gpd.read_file(
 # filter to CMAP counties and write to interim
 counties[counties["COUNTY_NAM"].isin(CMAP_counties)].to_crs(3435).to_file(
     os.path.join(
-        data_path, "interim/shp/cmap/cmap_epsg3534.shp"
+        data_path, "interim/shp/cmap/cmap_epsg3435.shp"
         )
     )
