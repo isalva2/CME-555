@@ -46,7 +46,7 @@ def build_fishnet(gdf, square_size: int=2000):
 
 if __name__ == "__main__":
     '''
-    Let's fishnet the Cook County shapefile and save to the interim folder
+    Let's fishnet the chicago shapefile and save to the interim folder
     '''
     # directory
     import os
@@ -54,21 +54,21 @@ if __name__ == "__main__":
     data_path = os.path.join(current_dir, "../data")
     
     # load Cook County shapefile
-    file = "interim/shp/cook/cook_epsg3435.shp"
+    file = "interim/shp/chicago/chicago_epsg3435.shp"
     
     # load gdf
-    cook_gdf = gpd.read_file(
+    chicago_gdf = gpd.read_file(
         os.path.join(
             data_path, file
         )
     )
     
     # create fishnet from cook county
-    cook_fishnet = build_fishnet(cook_gdf)
+    chicago_fishnet = build_fishnet(chicago_gdf, 500)
     
     # save to interim data
-    cook_fishnet.to_file(
+    chicago_fishnet.to_file(
         os.path.join(
-            data_path, "interim/shp/fishnet/cook_fishnet_2000.shp"
+            data_path, "interim/shp/fishnet/chicago_fishnet_500.shp"
         )
     )
